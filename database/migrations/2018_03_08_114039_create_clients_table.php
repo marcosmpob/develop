@@ -16,14 +16,14 @@ class CreateClientsTable extends Migration
         Schema::create('clients', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('document_number');//modificar o tamanho de cpf/cnpj teste
+            $table->string('document_number');//modificar o tamanho de cpf/cnpj
             $table->string('email');
             $table->string('phone');
             $table->boolean('defaulter');//inadiplente
             $table->date('date_birth');
             $table->char('sex',10);
             $table->enum('marital_status',array_keys(\App\Client::MARITAL_STATUS));
-            $table->string('phisical_disability')->nulllable();
+            $table->string('phisical_disability')->nullable();
             $table->timestamps();
         });
     }
