@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/teste', function () {
+    echo "cusão";
+    return view('welcome');
+});
