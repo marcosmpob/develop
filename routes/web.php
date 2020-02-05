@@ -31,7 +31,7 @@ Route::get('/categoria/{flag}/posts', function ($flag) {
 });
 
 
-Route::middleware([])->group(function(){
+/*Route::middleware([])->group(function(){
     Route::prefix('admin')->group(function(){
 
         Route::namespace('Admin')->group(function(){
@@ -45,4 +45,21 @@ Route::middleware([])->group(function(){
         });
 
     });
+});
+*/
+
+Route::group([
+    'middleware' => [],
+    'prefix' => 'admin',
+    'namespace' => 'Admin'
+], function(){
+    Route::get('/dashboard','TesteController@dashboard')->name('dashboard'); 
+    
+    Route::get('/financeiro','TesteController@financeiro')->name('financeiro');  
+
+    Route::get('/produtos','TesteController@produtos')->name('produtos');  
+
+    Route::get('/',function(){
+        return redirect()->route('dashboard');
+    })->name('home');
 });
