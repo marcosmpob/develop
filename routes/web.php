@@ -77,3 +77,7 @@ Route::get('/products/{id}','ProductController@show');
 */
 
 Route::resource('/products','ProductController');
+
+Route::get('/login', function(){
+    return 'Login';
+})->name('login'); 
