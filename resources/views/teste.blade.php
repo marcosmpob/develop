@@ -16,6 +16,5 @@
     <br/>
     interpreta
     <br/>
-    {!! $teste !!}
 </body>
 </html>
