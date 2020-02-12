@@ -8,8 +8,7 @@
     <h1>Cadasto de Produtos</h1>
 
     <form action="{{ route('products.store') }}" method="POST" >
-    {{-- <input type="hidden" name="_token" value="{{ csrf_token() }}"> --}}
-        @csrf
+    {{-- <input type="hidden" name="_token" value="{{ csrf_token() }}"> --}} 
         {{ csrf_field() }}
         <input type="text" name="name" placeholder="Nome">
         <input type="text" name="description" placeholder="Descrição">
