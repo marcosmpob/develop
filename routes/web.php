@@ -65,7 +65,7 @@ Route::group([
 });
 
 /*
-Route::delete('/productss/{id}','ProductController@destroy')->name('product.destroy');
+Route::delete('/products/{id}','ProductController@destroy')->name('product.destroy');
 Route::put('/products/{id}','ProductController@update')->name('product.update');
 Route::get('/products/{id}/edit','ProductController@edit')->name('product.edit');
 Route::get('/products/create','ProductController@create')->name('product.create');
@@ -73,7 +73,6 @@ Route::get('/products','ProductController@index')->name('product.index');
 Route::get('/products','ProductController@store')->name('product.store');
 Route::get('/products','ProductController@index');
 Route::get('/products/{id}','ProductController@show');
-
 */
 
 Route::resource('/products','ProductController');

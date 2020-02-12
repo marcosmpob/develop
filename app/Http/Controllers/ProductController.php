@@ -77,7 +77,8 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        return view('admin.page.products.index');
+        $teste = $id;
+        return view('admin.pages.products.edit',compact('teste'));
     }
 
     /**
@@ -89,7 +90,8 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        dd("Editando o Produto {$id}")
+    
+        dd("Editando o Produto {$id}");
     }
 
     /**
