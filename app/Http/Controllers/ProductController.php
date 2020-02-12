@@ -14,7 +14,7 @@ class ProductController extends Controller
         $this->request = $request;
 
         //excessão
-        $this->middleware('auth')->except(['show']);
+        $this->middleware('auth')->except(['index']);
         
         //aplicação
         //$this->middleware('auth')->only(['index','show']);
@@ -29,8 +29,9 @@ class ProductController extends Controller
     public function index()
     {
         $teste = "1";
+        $products = [1 => "whey",2 => 'bcaa',3,4,5,6];
 
-        return view('admin.pages.products.index',compact('teste'));
+        return view('admin.pages.products.index',compact('teste','products'));
     }
 
     /**
@@ -74,7 +75,7 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('admin.page.products.index');
     }
 
     /**
@@ -86,7 +87,7 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        dd("Editando o Produto {$id}")
     }
 
     /**

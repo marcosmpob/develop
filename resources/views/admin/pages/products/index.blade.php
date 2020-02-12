@@ -19,5 +19,15 @@
         @endif
 
 
+        @if (isset($products))
+                @foreach ($products as $product)
+                    <p>{{$product}}</p>
+                @endforeach
+            
+        @endif
+
+
 
 @endsection
+
+
