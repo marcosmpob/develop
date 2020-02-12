@@ -14,7 +14,9 @@ class ProductController extends Controller
         $this->request = $request;
 
         //excessão
-        $this->middleware('auth')->except(['index']);
+        // $this->middleware('auth')->except(['index']);
+        // $this->middleware('auth')->except(['show','create']);
+
         
         //aplicação
         //$this->middleware('auth')->only(['index','show']);
@@ -41,7 +43,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.pages.products.create');
     }
 
     /**
